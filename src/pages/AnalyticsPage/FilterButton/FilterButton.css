@@ -1,0 +1,13 @@
+.upper-card{
+  display: flex;
+  justify-content: space-between;
+}
+
+.lower-card{
+  display: flex;
+  justify-content: space-between;
+}
+
+.lower-card button {
+  color: red;
+}

@@ -1,0 +1,79 @@
+.App {
+  text-align: center;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.App-Upper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.App-Upper button {
+  width: 7%;
+  height: 5%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: solid;
+  border-width: 0.02rem;
+  color: #3498ff;
+  border-color: #878787;
+  box-shadow: -1px 1px #878787;
+  background-color: white;
+  box-shadow: 2rem;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.App-Upper button:hover {
+  background-color: #3498ff;
+  color: white;
+}
+
+.App h1 {
+  font-size: 25px;
+  position: absolute;
+  top: 20px;
+  left: 70px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.modal-overlay {
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  display: block;
+  background: white;
+  border-color: black;
+  box-shadow: #282c34;
+  width: 90%;
+  height: 20%;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  border: solid;
+  border-width: 0.1rem;
+  color: #3498ff;
+}
