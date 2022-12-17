@@ -19,7 +19,7 @@ const Overlay = React.forwardRef(
       border: "1px solid #ddd",
       boxShadow: "0 3px 6px -2px rgba(0, 0, 0, 0.6)",
       display: "flex",
-      flexDirection: "column"
+      flexDirection: "column",
     };
 
     const [currentRange, setCurrentRange] = useState([
@@ -49,23 +49,38 @@ const Overlay = React.forwardRef(
     return (
       <div {...rest} style={styles} ref={ref}>
         {/* <div style={{display: "flex"}}> */}
-        <div style={{display: "flex", width: "100%", justifyContent: "space-between", justifyItems: "center" }}>
+        <div
+          style={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "space-between",
+            justifyItems: "center",
+          }}
+        >
           {value?.min || 0}
           <div>
-          <RangeSlider
-            max={value?.max}
-            value={currentRange}
-            defaultValue={[value?.min || 0, value?.max || 0]}
-            onChange={handleOnRangeChange}
-            style={{width: "200%", margin: "0 10px", verticalAlign: "middle", }}
-          />
+            <RangeSlider
+              max={value?.max}
+              value={currentRange}
+              defaultValue={[value?.min || 0, value?.max || 0]}
+              onChange={handleOnRangeChange}
+              style={{
+                width: "200%",
+                margin: "0 10px",
+                verticalAlign: "middle",
+              }}
+            />
           </div>
           {value?.max || 0}
         </div>
         <hr />
-        <div style={{display: "flex", justifyContent: "space-between"}}>
-          <button onClick={handleReset}>Reset</button>
-          <button onClick={handleApply}>Apply</button>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <button style={{ color: "red" }} onClick={handleReset}>
+            Reset
+          </button>
+          <button style={{ color: "blue" }} onClick={handleApply}>
+            Apply
+          </button>
         </div>
       </div>
     );

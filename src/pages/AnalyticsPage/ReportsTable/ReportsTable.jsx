@@ -108,9 +108,9 @@ const ReportsTable = () => {
         </thead>
         <tbody>
           <tr>
-            {Object.keys(headerData)?.map((key, index) => (
+            {/* {Object.keys(headerData)?.map((key, index) => (
               <td>{headerData[key]}</td>
-            ))}
+            ))} */}
           </tr>
           {filteredData?.map((data, index) => (
             <tr key={index}>
